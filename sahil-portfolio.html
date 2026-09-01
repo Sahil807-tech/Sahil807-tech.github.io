@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sahil — Learning Log</title>
+<style>
+  :root{
+    --paper: #EDEEE7;
+    --paper-raised: #F6F6F1;
+    --ink: #202A26;
+    --ink-soft: #52605A;
+    --line: #C9CCC2;
+    --pine: #2F6F62;
+    --pine-deep: #1F4B41;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+    line-height:1.6;
+  }
+  .wrap{
+    max-width:620px;
+    margin:0 auto;
+    padding: 64px 24px 120px;
+  }
+  header.hero{
+    margin-bottom: 64px;
+  }
+  .kicker{
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin: 0 0 12px;
+    letter-spacing: 0.01em;
+  }
+  h1{
+    font-size: clamp(38px, 9vw, 56px);
+    line-height: 1.05;
+    margin: 0 0 18px;
+    font-weight: 600;
+    color: var(--pine-deep);
+  }
+  .lede{
+    font-size: 18px;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin: 0;
+  }
+  .lede em{
+    font-style: italic;
+    color: var(--ink);
+  }
+
+  section{
+    margin-bottom: 56px;
+  }
+  h2{
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--pine);
+    margin: 0 0 24px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .entry{
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .entry:last-child{ border-bottom: none; }
+  .entry-num{
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 13px;
+    color: var(--ink-soft);
+    padding-top: 3px;
+  }
+  .entry-status{
+    display:inline-block;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+  }
+  .status-active{ background: #DCEAE4; color: var(--pine-deep); }
+  .status-queued{ background: #E4E4DC; color: var(--ink-soft); }
+
+  .entry h3{
+    margin: 0 0 6px;
+    font-size: 19px;
+    font-weight: 600;
+  }
+  .entry p{
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 15.5px;
+    max-width: 48ch;
+  }
+
+  .goal-line{
+    font-size: 17px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    display:flex;
+    gap: 14px;
+  }
+  .goal-line:last-child{ border-bottom:none; }
+  .goal-mark{
+    color: var(--pine);
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    flex-shrink:0;
+  }
+
+  footer{
+    border-top: 1px solid var(--line);
+    padding-top: 28px;
+    margin-top: 40px;
+  }
+  footer p{ color: var(--ink-soft); font-size: 15px; margin: 0 0 14px; }
+  .contact-row{
+    display:flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .contact-row a{
+    color: var(--pine-deep);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid var(--pine);
+    padding-bottom: 1px;
+  }
+  .contact-row a:hover{ color: var(--pine); }
+
+  @media (max-width: 420px){
+    .entry{ grid-template-columns: 36px 1fr; gap: 10px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <p class="kicker">learning log / est. 2026</p>
+    <h1>Sahil</h1>
+    <p class="lede">Student, working through the fundamentals of AI one layer at a time — <em>currently on Linux and Python</em>, with machine learning next in the queue.</p>
+  </header>
+
+  <section aria-label="Currently learning">
+    <h2>in progress</h2>
+
+    <div class="entry">
+      <div class="entry-num">01</div>
+      <div>
+        <span class="entry-status status-active">active</span>
+        <h3>Linux</h3>
+        <p>Command line, file permissions, shell basics — building comfort with the environment most AI tools run on.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-num">02</div>
+      <div>
+        <span class="entry-status status-active">active</span>
+        <h3>Python</h3>
+        <p>Core language fundamentals, working toward the libraries used for data and machine learning.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-num">03</div>
+      <div>
+        <span class="entry-status status-queued">queued</span>
+        <h3>Machine learning foundations</h3>
+        <p>Math basics, then a first hands-on model. Coming once Python is solid.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Goals">
+    <h2>what this is building toward</h2>
+    <div class="goal-line"><span class="goal-mark">—</span><span>Build real, working AI projects, not just tutorials followed along.</span></div>
+    <div class="goal-line"><span class="goal-mark">—</span><span>Get comfortable enough with the fundamentals to specialize — likely in applied ML or LLM-based tools.</span></div>
+    <div class="goal-line"><span class="goal-mark">—</span><span>Turn this page into a record of projects, not just a log of what's being learned.</span></div>
+  </section>
+
+  <footer>
+    <p>This page updates as the learning does. Reach out if you're on a similar path.</p>
+    <div class="contact-row">
+      <a href="mailto:your-email@example.com">Email</a>
+      <a href="https://github.com/yourusername">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
